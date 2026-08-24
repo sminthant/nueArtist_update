@@ -1,0 +1,4 @@
+/**
+ * Shared hooks live here. Add client-only hooks as features grow.
+ */
+export {};
