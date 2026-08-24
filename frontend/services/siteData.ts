@@ -9,6 +9,7 @@ import type {
   SampleLink,
   SocialLink,
 } from '@/types';
+import { DEMO_BIOGRAPHY_IMAGES, DEMO_IMAGES } from '@/lib/demo-images';
 
 export const navigation: NavigationItem[] = [
   { id: 'home', label: 'Home' },
@@ -28,10 +29,7 @@ export const socialLinks: SocialLink[] = [
 
 export const contactEmail = 'contact@nue.artist';
 
-const albumCovers = [
-  '/storage/albums/jqaJ81rDccRRmJDpk75JpnWBpuW12PTjXHT7iPeh.jpg',
-  '/storage/albums/TprcaRWngCskaDfRquO2SiGfWtboAxK6maAmT6tT.jpg',
-];
+const albumCovers = [DEMO_IMAGES.album, DEMO_IMAGES.album];
 
 export const releases: Release[] = [
   {
@@ -83,7 +81,7 @@ export const latestAnnouncement: Announcement = {
   title: 'New Drop Incoming',
   content:
     '<p>Cinematic bass music, raw club energy, and immersive visuals. Stay tuned for the next NUE release and tour dates.</p>',
-  image_url: '/storage/posts/CLAZtePpXRKnu9kIzeEAGiOU2fk44HOlA7AdHGKP.jpg',
+  image_url: DEMO_IMAGES.announcement,
   social_link_1: 'https://instagram.com/',
   social_link_2: 'https://x.com/',
   created_at: new Date().toISOString(),
@@ -97,7 +95,7 @@ export const upcomingEvents: EventItem[] = [
     location: 'Bangkok',
     event_date: new Date(Date.now() + 1000 * 60 * 60 * 24 * 30).toISOString(),
     booking_url: 'https://example.com/tickets',
-    poster_image_url: '/storage/events/sAw21Xu6d13d30BglHFwYVe9XpsAn0uJGmP8yv5R.jpg',
+    poster_image_url: DEMO_IMAGES.event,
   },
 ];
 
@@ -109,7 +107,7 @@ export const pastEvents: EventItem[] = [
     location: 'Bangkok',
     event_date: new Date(Date.now() - 1000 * 60 * 60 * 24 * 60).toISOString(),
     booking_url: null,
-    poster_image_url: '/storage/events/rSvKaSJGSOKmf6exENPG5oz8FHg6VHTe527whcNA.jpg',
+    poster_image_url: DEMO_IMAGES.event,
   },
 ];
 
@@ -118,7 +116,7 @@ export const sampleLinks: SampleLink[] = [
     id: 1,
     name: 'Pack Alpha',
     direct_link: 'https://example.com/pack-alpha',
-    image_url: '/storage/sample-links/FpBDD7QPtNYhTSI3bfl4Eyo7tJmo2iQ1irm9uDMZ.png',
+    image_url: DEMO_IMAGES.sampleLink,
     price: 29.99,
     order: 0,
   },
@@ -126,7 +124,7 @@ export const sampleLinks: SampleLink[] = [
     id: 2,
     name: 'Pack Beta',
     direct_link: 'https://example.com/pack-beta',
-    image_url: '/storage/sample-links/GsapBRyvdwS9rgMkFXLWFGDCGqnMklSR1ATd0duE.jpg',
+    image_url: DEMO_IMAGES.sampleLink,
     price: 34.99,
     order: 1,
   },
@@ -134,7 +132,7 @@ export const sampleLinks: SampleLink[] = [
     id: 3,
     name: 'Pack Gamma',
     direct_link: 'https://example.com/pack-gamma',
-    image_url: '/storage/sample-links/Gu9S4ONKzex3x2wLyygA3aFCZzk8hNHOESdPUf8o.jpg',
+    image_url: DEMO_IMAGES.sampleLink,
     price: 24.99,
     order: 2,
   },
@@ -142,18 +140,13 @@ export const sampleLinks: SampleLink[] = [
     id: 4,
     name: 'Pack Delta',
     direct_link: 'https://example.com/pack-delta',
-    image_url: '/storage/sample-links/lZmmSxY2p694wTqqV9wxNvEuiD8KPsOGuwJ0L6ue.png',
+    image_url: DEMO_IMAGES.sampleLink,
     price: 39.99,
     order: 3,
   },
 ];
 
-const biographyImages = [
-  '/storage/biographies/7S78sZXTR8EJtJWMLLSMX9R0fAalgOwJpg1rA47k.jpg',
-  '/storage/biographies/mC5jadpasysArSq92tNe1MwCo3zo2sgxpICKq2s6.jpg',
-  '/storage/biographies/oPKJTjuOY5nZQP2uz7C8K1LzMPhSv1Z0evBsqIrH.jpg',
-  '/storage/biographies/s0wQMzjUpdHd1BGeOGf6UCzSOU6BZzYzhNo9595o.png',
-];
+const biographyImages = [...DEMO_BIOGRAPHY_IMAGES];
 
 export const biographies: Biography[] = [
   {
